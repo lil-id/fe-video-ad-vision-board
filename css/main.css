@@ -1,0 +1,596 @@
+/**
+ * Main Stylesheet - CV Aneka Aluminium Cemerlang
+ * Design System: Refined Industrial Aesthetic
+ * Inspired by: PT GSI's polished UI/UX approach
+ */
+
+/* ==================== CSS RESET ==================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==================== CSS VARIABLES ==================== */
+:root {
+  /* Industrial Minimalist Palette */
+
+  /* Brand Color - ONLY for logo */
+  --color-brand: #C41E3A;
+  /* AAC red - logo only, not UI */
+
+  /* Primary Colors - Industrial neutrals */
+  --color-primary: #1e293b;
+  /* Slate dark - professional */
+  --color-primary-dark: #0f172a;
+  /* Almost black */
+  --color-primary-light: #334155;
+  /* Lighter slate */
+
+  /* Accent - Subtle industrial blue */
+  --color-accent: #64748b;
+  /* Steel gray - understated */
+  --color-accent-dark: #475569;
+  /* Darker steel */
+  --color-accent-light: #94a3b8;
+  /* Light steel */
+
+  /* Neutrals - Clean & minimal */
+  --color-dark: #0f172a;
+  /* Almost black - headings */
+  --color-gray-900: #1e293b;
+  /* Very dark slate */
+  --color-gray-800: #334155;
+  /* Dark slate */
+  --color-gray-700: #475569;
+  /* Slate */
+  --color-gray-600: #64748b;
+  /* Medium slate */
+  --color-gray-500: #94a3b8;
+  /* Light slate */
+  --color-gray-400: #cbd5e1;
+  /* Very light slate */
+  --color-gray-300: #e2e8f0;
+  /* Almost white slate */
+  --color-gray-200: #f1f5f9;
+  /* Off-white */
+  --color-gray-100: #f8fafc;
+  /* Near white */
+  --color-white: #ffffff;
+  /* Pure white */
+
+  /* Semantic colors - minimal use */
+  --color-success: #10b981;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
+
+  /* Industrial materials - for texture/subtle accents */
+  --color-steel: #64748b;
+  /* Steel blue-gray */
+  --color-aluminum: #e2e8f0;
+  /* Light aluminum */
+  --color-chrome: #cbd5e1;
+  /* Chrome/metallic */
+
+  /* Typography - DM Sans + Space Grotesk */
+  --font-primary: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-heading: 'Space Grotesk', 'DM Sans', sans-serif;
+
+  /* Font Sizes - Responsive scale */
+  --font-size-xs: 0.75rem;
+  /* 12px */
+  --font-size-sm: 0.875rem;
+  /* 14px */
+  --font-size-base: 1rem;
+  /* 16px */
+  --font-size-lg: 1.125rem;
+  /* 18px */
+  --font-size-xl: 1.25rem;
+  /* 20px */
+  --font-size-2xl: 1.5rem;
+  /* 24px */
+  --font-size-3xl: 1.875rem;
+  /* 30px */
+  --font-size-4xl: 2.25rem;
+  /* 36px */
+  --font-size-5xl: 3rem;
+  /* 48px */
+  --font-size-6xl: 3.75rem;
+  /* 60px */
+  --font-size-7xl: 4.5rem;
+  /* 72px */
+
+  /* Font Weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-extrabold: 800;
+
+  /* Line Heights - Better readability */
+  --line-height-tight: 1.1;
+  --line-height-snug: 1.3;
+  --line-height-normal: 1.5;
+  --line-height-relaxed: 1.75;
+  --line-height-loose: 2;
+
+  /* Letter Spacing - Refined typography */
+  --letter-spacing-tight: -0.02em;
+  --letter-spacing-normal: 0;
+  --letter-spacing-wide: 0.025em;
+
+  /* Spacing System */
+  --spacing-xs: 0.25rem;
+  /* 4px */
+  --spacing-sm: 0.5rem;
+  /* 8px */
+  --spacing-md: 1rem;
+  /* 16px */
+  --spacing-lg: 1.5rem;
+  /* 24px */
+  --spacing-xl: 2rem;
+  /* 32px */
+  --spacing-2xl: 3rem;
+  /* 48px */
+  --spacing-3xl: 4rem;
+  /* 64px */
+  --spacing-4xl: 6rem;
+  /* 96px */
+  --spacing-5xl: 8rem;
+  /* 128px */
+
+  /* Layout */
+  --container-width: 1280px;
+  --container-padding: 1.5rem;
+
+  /* Border Radius */
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 0.75rem;
+  --border-radius-xl: 1rem;
+  --border-radius-2xl: 1.5rem;
+  --border-radius-full: 9999px;
+
+  /* Shadows - Subtle depth */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  /* Transitions - Smooth easing inspired by GSI */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-base: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  /* Smooth ease-out */
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 600ms cubic-bezier(0.16, 1, 0.3, 1);
+  /* Very smooth */
+
+  /* Z-index */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ==================== BASE STYLES ==================== */
+body {
+  font-family: var(--font-primary);
+  font-size: var(--font-size-lg);
+  /* Larger base - 18px */
+  line-height: var(--line-height-relaxed);
+  /* More breathing room */
+  color: var(--color-gray-800);
+  background-color: var(--color-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography - Refined hierarchy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  /* Slightly condensed */
+  color: var(--color-dark);
+  margin-bottom: var(--spacing-lg);
+}
+
+h1 {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  /* Responsive */
+  font-weight: var(--font-weight-extrabold);
+  line-height: 1.05;
+  /* Extra tight for impact */
+}
+
+h2 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+  line-height: 1.2;
+}
+
+h4 {
+  font-size: clamp(1.25rem, 3vw, 1.875rem);
+  line-height: 1.3;
+}
+
+h5 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+}
+
+h6 {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+}
+
+p {
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-gray-700);
+  line-height: var(--line-height-relaxed);
+  letter-spacing: var(--letter-spacing-normal);
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+a:hover {
+  color: var(--color-primary-light);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+strong {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-dark);
+}
+
+/* ==================== LAYOUT ==================== */
+.container {
+  width: 100%;
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.section {
+  padding: var(--spacing-5xl) 0;
+  /* Larger vertical spacing */
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+
+/* Spacing */
+.mt-xs {
+  margin-top: var(--spacing-xs);
+}
+
+.mt-sm {
+  margin-top: var(--spacing-sm);
+}
+
+.mt-md {
+  margin-top: var(--spacing-md);
+}
+
+.mt-lg {
+  margin-top: var(--spacing-lg);
+}
+
+.mt-xl {
+  margin-top: var(--spacing-xl);
+}
+
+.mt-2xl {
+  margin-top: var(--spacing-2xl);
+}
+
+.mt-3xl {
+  margin-top: var(--spacing-3xl);
+}
+
+.mb-xs {
+  margin-bottom: var(--spacing-xs);
+}
+
+.mb-sm {
+  margin-bottom: var(--spacing-sm);
+}
+
+.mb-md {
+  margin-bottom: var(--spacing-md);
+}
+
+.mb-lg {
+  margin-bottom: var(--spacing-lg);
+}
+
+.mb-xl {
+  margin-bottom: var(--spacing-xl);
+}
+
+.mb-2xl {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.mb-3xl {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.pt-sm {
+  padding-top: var(--spacing-sm);
+}
+
+.pt-md {
+  padding-top: var(--spacing-md);
+}
+
+.pt-lg {
+  padding-top: var(--spacing-lg);
+}
+
+.pt-xl {
+  padding-top: var(--spacing-xl);
+}
+
+.pb-sm {
+  padding-bottom: var(--spacing-sm);
+}
+
+.pb-md {
+  padding-bottom: var(--spacing-md);
+}
+
+.pb-lg {
+  padding-bottom: var(--spacing-lg);
+}
+
+.pb-xl {
+  padding-bottom: var(--spacing-xl);
+}
+
+/* Display */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+/* Gap */
+.gap-sm {
+  gap: var(--spacing-sm);
+}
+
+.gap-md {
+  gap: var(--spacing-md);
+}
+
+.gap-lg {
+  gap: var(--spacing-lg);
+}
+
+.gap-xl {
+  gap: var(--spacing-xl);
+}
+
+.gap-2xl {
+  gap: var(--spacing-2xl);
+}
+
+/* Text */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-accent {
+  color: var(--color-accent);
+}
+
+.text-dark {
+  color: var(--color-dark);
+}
+
+.text-gray {
+  color: var(--color-gray-600);
+}
+
+.text-white {
+  color: var(--color-white);
+}
+
+.font-bold {
+  font-weight: var(--font-weight-bold);
+}
+
+.font-semibold {
+  font-weight: var(--font-weight-semibold);
+}
+
+.font-medium {
+  font-weight: var(--font-weight-medium);
+}
+
+/* Background */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-light {
+  background-color: var(--color-gray-100);
+}
+
+.bg-dark {
+  background-color: var(--color-dark);
+}
+
+.bg-white {
+  background-color: var(--color-white);
+}
+
+/* ==================== ANIMATIONS ==================== */
+/* Subtle fade-in on scroll */
+.animate-fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--transition-smooth),
+    transform var(--transition-smooth);
+}
+
+.animate-fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animation for lists */
+.animate-stagger>* {
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity var(--transition-base),
+    transform var(--transition-base);
+}
+
+.animate-stagger.visible>*:nth-child(1) {
+  transition-delay: 100ms;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-stagger.visible>*:nth-child(2) {
+  transition-delay: 200ms;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-stagger.visible>*:nth-child(3) {
+  transition-delay: 300ms;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.animate-stagger.visible>*:nth-child(4) {
+  transition-delay: 400ms;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==================== CUSTOM SCROLLBAR ==================== */
+::-webkit-scrollbar {
+  width: 6px;
+  /* Thinner - more minimal */
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-400);
+  border-radius: var(--border-radius-full);
+  transition: background var(--transition-base);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-steel);
+  /* Industrial steel on hover */
+}
+
+/* ==================== SELECTION ==================== */
+::selection {
+  background-color: var(--color-steel);
+  /* Subtle steel, not bright */
+  color: var(--color-white);
+}
+
+::-moz-selection {
+  background-color: var(--color-steel);
+  color: var(--color-white);
+}
+
+/* ==================== RESPONSIVE BREAKPOINTS ==================== */
+/* Mobile First Approach */
+
+@media (max-width: 640px) {
+  :root {
+    --font-size-lg: 1rem;
+    /* Base font smaller on mobile */
+    --spacing-5xl: 4rem;
+    /* Reduce vertical spacing */
+    --container-padding: 1rem;
+  }
+
+  body {
+    font-size: var(--font-size-base);
+  }
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--spacing-5xl) 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --container-padding: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* Extra large screens - maintain spacing */
+}

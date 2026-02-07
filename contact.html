@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Hubungi CV Aneka Aluminium Cemerlang untuk konsultasi dan penawaran fabrikasi metal. Tim kami siap membantu kebutuhan industri Anda.">
+    <meta name="keywords" content="kontak, hubungi kami, konsultasi, penawaran, fabrikasi metal">
+
+    <title>Hubungi Kami - CV Aneka Aluminium Cemerlang</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                <div class="navbar-logo-icon">AAC</div>
+                <span>Aneka Aluminium</span>
+            </a>
+
+            <ul class="navbar-menu" id="navbarMenu">
+                <li><a href="index.html">Beranda</a></li>
+                <li><a href="about.html">Tentang Kami</a></li>
+                <li><a href="services.html">Layanan</a></li>
+                <li><a href="portfolio.html">Portofolio</a></li>
+                <li><a href="contact.html" class="active">Kontak</a></li>
+            </ul>
+
+            <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="contact-hero">
+        <div class="container">
+            <p class="section-subtitle">Hubungi Kami</p>
+            <h1>Mari Diskusikan Proyek Anda</h1>
+            <p class="section-description">
+                Tim kami siap membantu Anda menemukan solusi fabrikasi metal terbaik untuk kebutuhan industri Anda.
+                Hubungi kami sekarang!
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-container">
+
+                <!-- Contact Information -->
+                <div class="contact-info">
+                    <h3>Informasi Kontak</h3>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Alamat</h4>
+                            <p>Jl. Industri No. 123<br>Kawasan Industri, Jakarta Timur<br>Jakarta 13610, Indonesia</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Telepon / WhatsApp</h4>
+                            <p>
+                                <a href="tel:+6281234567890">+62 812-3456-7890</a><br>
+                                <a href="tel:+622112345678">+62 21 1234-5678</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>
+                                <a href="mailto:info@anekaaluminium.com">info@anekaaluminium.com</a><br>
+                                <a href="mailto:sales@anekaaluminium.com">sales@anekaaluminium.com</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">🕐</div>
+                        <div class="contact-details">
+                            <h4>Jam Operasional</h4>
+                            <p>
+                                Senin - Jumat: 08:00 - 17:00<br>
+                                Sabtu: 08:00 - 13:00<br>
+                                Minggu & Tanggal Merah: Tutup
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item" style="border-bottom: none;">
+                        <div class="contact-icon">🌐</div>
+                        <div class="contact-details">
+                            <h4>Media Sosial</h4>
+                            <div class="footer-social" style="margin-top: var(--spacing-sm);">
+                                <a href="#" aria-label="Facebook">📘</a>
+                                <a href="#" aria-label="Instagram">📷</a>
+                                <a href="#" aria-label="LinkedIn">💼</a>
+                                <a href="https://wa.me/6281234567890" aria-label="WhatsApp" target="_blank">💬</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Formulir Kontak</h2>
+                    <p class="mb-xl" style="color: var(--color-gray-600);">
+                        Isi formulir di bawah ini dan tim kami akan menghubungi Anda dalam waktu 24 jam.
+                    </p>
+
+                    <!-- Success Message -->
+                    <div class="form-success" id="formSuccess">
+                        <strong>✓ Pesan Terkirim!</strong><br>
+                        Terima kasih telah menghubungi kami. Tim kami akan segera memproses permintaan Anda.
+                    </div>
+
+                    <!-- Contact Form -->
+                    <form id="contactForm" class="contact-form">
+                        <!-- Honeypot for spam protection -->
+                        <input type="text" name="website" class="form-honeypot" tabindex="-1" autocomplete="off">
+
+                        <div class="form-group">
+                            <label for="companyName" class="form-label">
+                                Nama Perusahaan <span class="required">*</span>
+                            </label>
+                            <input type="text" id="companyName" name="companyName" class="form-input"
+                                placeholder="Contoh: PT Maju Jaya" required>
+                            <div class="form-error">Nama perusahaan wajib diisi</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contactName" class="form-label">
+                                Nama Kontak Person <span class="required">*</span>
+                            </label>
+                            <input type="text" id="contactName" name="contactName" class="form-input"
+                                placeholder="Nama Anda" required>
+                            <div class="form-error">Nama kontak wajib diisi</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">
+                                Email <span class="required">*</span>
+                            </label>
+                            <input type="email" id="email" name="email" class="form-input"
+                                placeholder="email@perusahaan.com" required>
+                            <div class="form-error">Email valid wajib diisi</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">
+                                Nomor Telepon / WhatsApp <span class="required">*</span>
+                            </label>
+                            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+62 812-3456-7890"
+                                required>
+                            <div class="form-error">Nomor telepon wajib diisi</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="serviceInterest" class="form-label">
+                                Layanan yang Diminati
+                            </label>
+                            <select id="serviceInterest" name="serviceInterest" class="form-select">
+                                <option value="">-- Pilih Layanan --</option>
+                                <option value="aluminium">Fabrikasi Aluminium</option>
+                                <option value="stainless">Fabrikasi Stainless Steel</option>
+                                <option value="welding">Welding Services</option>
+                                <option value="cutting">Laser Cutting</option>
+                                <option value="machining">Machining</option>
+                                <option value="custom">Custom Fabrication</option>
+                                <option value="consultation">Konsultasi Umum</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">
+                                Kebutuhan / Pesan <span class="required">*</span>
+                            </label>
+                            <textarea id="message" name="message" class="form-textarea"
+                                placeholder="Jelaskan kebutuhan fabrikasi metal Anda, spesifikasi, quantity, timeline, dll."
+                                required></textarea>
+                            <div class="form-error">Pesan wajib diisi</div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;" id="submitBtn">
+                                <span id="submitText">Kirim Pesan</span>
+                                <span id="submitSpinner" class="spinner" style="display: none;"></span>
+                            </button>
+                        </div>
+
+                        <p style="font-size: var(--font-size-sm); color: var(--color-gray-600); text-align: center;">
+                            Dengan mengirim formulir ini, Anda setuju bahwa data Anda akan digunakan untuk keperluan
+                            komunikasi bisnis.
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section (Optional) -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lokasi Kami</h2>
+                <p class="section-description">
+                    Kunjungi workshop kami untuk melihat fasilitas dan kapabilitas produksi kami secara langsung.
+                </p>
+            </div>
+
+            <!-- Google Maps Embed Placeholder -->
+            <div
+                style="width: 100%; height: 450px; background: linear-gradient(135deg, var(--color-gray-300), var(--color-gray-400)); border-radius: var(--border-radius-xl); display: flex; align-items: center; justify-content: center; color: var(--color-gray-600);">
+                <div style="text-align: center;">
+                    <div style="font-size: 3rem; margin-bottom: 1rem;">🗺️</div>
+                    <p style="font-weight: 600;">Google Maps</p>
+                    <p style="font-size: 0.875rem;">Jl. Industri No. 123, Kawasan Industri, Jakarta</p>
+                    <a href="https://maps.google.com" target="_blank" class="btn btn-primary mt-md">Buka di Google
+                        Maps</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Lebih Suka Chat Langsung?</h2>
+                <p class="section-description">
+                    Hubungi kami via WhatsApp untuk respon yang lebih cepat!
+                </p>
+            </div>
+            <div class="flex-center gap-lg mt-xl" style="flex-wrap: wrap;">
+                <a href="https://wa.me/6281234567890?text=Halo%2C%20saya%20tertarik%20dengan%20layanan%20fabrikasi%20metal%20dari%20CV%20Aneka%20Aluminium%20Cemerlang"
+                    class="btn btn-white btn-lg" target="_blank">
+                    💬 Chat via WhatsApp
+                </a>
+                <a href="tel:+6281234567890" class="btn btn-secondary btn-lg"
+                    style="border-color: white; color: white;">
+                    📞 Telepon Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CV Aneka Aluminium Cemerlang</h3>
+                    <p>
+                        Perusahaan terpercaya dalam bidang fabrikasi metal dan aluminium untuk kebutuhan industri.
+                        Melayani dengan profesional dan hasil berkualitas tinggi.
+                    </p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="WhatsApp">💬</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Layanan</h3>
+                    <ul>
+                        <li><a href="services.html#aluminium">Fabrikasi Aluminium</a></li>
+                        <li><a href="services.html#stainless">Fabrikasi Stainless Steel</a></li>
+                        <li><a href="services.html#welding">Welding Services</a></li>
+                        <li><a href="services.html#cutting">Laser Cutting</a></li>
+                        <li><a href="services.html#custom">Custom Fabrication</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Perusahaan</h3>
+                    <ul>
+                        <li><a href="about.html">Tentang Kami</a></li>
+                        <li><a href="portfolio.html">Portofolio</a></li>
+                        <li><a href="contact.html">Kontak</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Kontak</h3>
+                    <ul>
+                        <li>📍 Jl. Industri No. 123, Kawasan Industri, Jakarta</li>
+                        <li>📞 <a href="tel:+6281234567890">+62 812-3456-7890</a></li>
+                        <li>✉️ <a href="mailto:info@anekaaluminium.com">info@anekaaluminium.com</a></li>
+                        <li>🕐 Senin - Sabtu: 08:00 - 17:00</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 CV Aneka Aluminium Cemerlang. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/form.js"></script>
+
+</body>
+
+</html>
